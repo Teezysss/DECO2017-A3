@@ -1,0 +1,514 @@
+ #alert {
+     height: 200px;
+     width: 400px;
+     background-color: white;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     display: none;
+ }
+
+ body {
+
+     overflow: hidden;
+     position: relative;
+ }
+
+ .container {
+     display: flex;
+
+     color: rgb(38, 61, 76)
+ }
+
+ #circle {
+
+     display: flex;
+     margin-left: 5px;
+ }
+
+ .l1 {
+     background-color: red;
+     height: 10px;
+     width: 10px;
+     border-radius: 50%;
+     margin-left: 20px;
+ }
+
+ .l2 {
+     background-color: yellow;
+     height: 10px;
+     width: 10px;
+     border-radius: 50%;
+     margin-left: 10px;
+ }
+
+ .l3 {
+     background-color: green;
+     height: 10px;
+     width: 10px;
+     border-radius: 50%;
+     margin-left: 10px;
+ }
+
+ .picLogo {
+     display: flex;
+     margin-top: 10px;
+     margin-left: 20px;
+ }
+
+ .picLogo img {
+     height: 60px;
+     width: 60px;
+ }
+
+ .left {
+     box-sizing: border-box;
+     width: 100px;
+     height: 100%;
+     background-color: rgb(38, 61, 76);
+     padding-top: 20px;
+
+     height: 752px;
+ }
+
+ #text h2 {
+     font-size: 16px;
+     margin-top: 30px;
+     margin-left: 0px;
+     color: rgb(32, 206, 133);
+ }
+
+ .left ul {
+
+     /* width: 150px; */
+     text-align: center;
+     margin: 30px auto;
+
+
+ }
+
+ .left ul li {
+     width: 100px;
+     display: flex;
+     margin-left: -40px;
+     box-sizing: border-box;
+     padding-left: 40px;
+     padding-top: 10px;
+     height: 50px;
+     margin-top: 10px;
+
+ }
+
+ .left li img {
+     height: 20px;
+     /* margin-top: 10px; */
+     margin-top: 5px;
+ }
+
+ .left li span {
+     color: white;
+     font-size: 14px;
+     margin-left: 20px;
+     margin-top: 5px;
+ }
+
+ #text p {
+     white-space: nowrap;
+     color: white;
+     font-size: 18px;
+     transform: scale(0.5);
+     margin-left: -60px;
+     margin-top: -5px;
+
+ }
+
+ .right {
+     box-sizing: border-box;
+     width: 250px;
+     padding-top: 10px;
+
+ }
+
+
+ .right img {
+     height: 40px;
+     border-radius: 50%;
+     margin-left: 180px;
+     margin-bottom: 10px;
+ }
+
+ .right .msg {
+     width: 95%;
+     height: 120px;
+     background-color: rgb(38, 61, 76);
+     margin: 0 auto 30px auto;
+     border-radius: 20px;
+     padding: 0 10px;
+     box-sizing: border-box;
+     color: white;
+
+ }
+
+ .right .logo {
+     display: flex;
+
+ }
+
+ .right .logo img {
+     margin: 10px 0;
+ }
+
+ .right .text {
+     position: relative;
+     white-space: nowrap;
+     margin-left: 5px;
+ }
+
+ .right h5 {
+     font-size: 12px;
+     position: absolute;
+ }
+
+ .right p {
+     font-size: 14px;
+     position: absolute;
+     top: 20px;
+     transform: scale(0.5);
+     left: -50px;
+     color: rgb(92, 102, 110);
+ }
+
+ .right .box {
+     background-color: green;
+
+     width: 20px;
+     border-radius: 50%;
+     margin-right: 5px;
+ }
+
+ .right ul {
+     white-space: nowrap;
+     display: flex;
+     font-size: 14px;
+     transform: scale(0.5);
+     margin-left: -90px;
+
+ }
+
+ .right ul li {
+     margin-left: 20px;
+     display: flex;
+ }
+
+ .right .input {
+     box-sizing: border-box;
+     display: flex;
+     height: 30px;
+     padding: 0 10px;
+     margin: 30px 0px;
+     justify-content: space-between;
+     position: relative;
+ }
+
+ .input h4 {
+     margin-top: 5px;
+ }
+
+ .right h4 {
+     font-size: 12px;
+ }
+
+ .right input {
+     margin-left: 60px;
+     height: 20px;
+     width: 100px;
+     margin-top: 15px;
+
+ }
+
+ .icon {
+     border-left: 5px solid white;
+     border-right: 5px solid white;
+     border-bottom: transparent;
+     border-top: 5px solid black;
+     position: absolute;
+     top: 25px;
+     right: 20px;
+ }
+
+ input:focus {
+     /* border: none; */
+     outline: none;
+ }
+
+
+ /* 中间部分 */
+ .center {
+     flex: 1;
+     background-color: rgb(243, 245, 245);
+ }
+
+ .center .nav {
+     display: flex;
+     justify-content: space-between;
+
+ }
+
+ .center .nav h2 {
+     font-size: 18px;
+     margin-left: 20px;
+     margin-top: 50px;
+ }
+
+ .center .nav ul {
+     display: flex;
+     margin-top: 60px;
+ }
+
+ .center .nav ul li {
+     margin-right: 50px;
+     color: rgb(124, 123, 121);
+     font-size: 12px;
+ }
+
+ .router {
+     display: flex;
+     margin-left: 20px;
+     font-size: 12px;
+     font-weight: lighter;
+ }
+
+ .router h4:first-child {
+     color: rgb(32, 206, 133);
+     margin-right: 30px;
+     border-bottom: 1px solid rgb(32, 206, 133);
+ }
+
+ .bar {
+     display: flex;
+     padding: 0 20px;
+     box-sizing: border-box;
+     justify-content: space-between;
+ }
+
+ .bar img {
+     width: 25px;
+     background-color: rgb(38, 61, 76);
+
+ }
+
+ .bar h6 {
+     margin-top: 22px;
+     display: flex;
+     font-size: 12px;
+     transform: scale(0.8);
+ }
+
+ .task-title {
+     color: rgb(87, 89, 89);
+     font-size: 12px;
+     display: flex;
+     margin-top: -20px;
+     text-align: center;
+ }
+
+ .task-item {
+     color: rgb(179, 185, 185);
+     font-size: 12px;
+     display: flex;
+     margin-top: 10px;
+     text-align: center;
+     height: 40px;
+     line-height: 40px;
+
+ }
+
+ .task-item li h6 {
+     white-space: nowrap;
+     /* font-size: 12px; */
+     color: rgb(38, 61, 76);
+     margin-top: -42px;
+ }
+
+ .watch {
+     width: 95%;
+     height: 260px;
+     background-color: rgb(38, 61, 76);
+     border-radius: 20px;
+     margin: 30px auto;
+     color: white;
+     padding: 10px 20px;
+     box-sizing: border-box;
+ }
+
+ .watch .nav {
+     display: flex;
+     margin-left: -180px;
+     justify-content: space-between;
+ }
+
+ .watch .nav img {
+     height: 15px;
+ }
+
+ .watch .nav h3 {
+     font-size: 12px;
+     margin-top: 0;
+ }
+
+ .watch h6 {
+     margin-top: 40px;
+     font-size: 12px;
+     font-weight: lighter;
+     transform: scale(0.8);
+     margin-left: -22px;
+ }
+
+ .watch h4 {
+     font-size: 12px;
+     transform: scale(0.5);
+     font-weight: lighter;
+     margin-left: -65px;
+     margin-top: -20px;
+ }
+
+ .line {
+     width: 200px;
+     margin: 0 auto;
+     background-color: white;
+     height: 1px;
+     margin-top: -15px;
+ }
+
+ .control {
+     position: relative;
+     /* margin-left: -300px; */
+     margin-top: 10px;
+ }
+
+ .control img {
+     position: absolute;
+     height: 30px;
+     /* display: block; */
+     left: -140px;
+ }
+
+ .control .time {
+     position: absolute;
+     font-size: 20px;
+     right: 20px;
+ }
+
+ .card {
+     box-sizing: border-box;
+     height: 80px;
+     /* width: 95%; */
+     margin: 50px auto;
+     border-radius: 10px;
+     background-color: rgb(243, 245, 245);
+     color: rgb(38, 61, 76);
+     /* padding: 0px 5px; */
+ }
+
+ .card h2 {
+     font-size: 12px;
+     transform: scale(0.8);
+     white-space: nowrap;
+     margin-left: -5px;
+ }
+
+ .pro {
+     display: flex;
+     width: 90%;
+     margin: 0 auto;
+ }
+
+ .t1 {
+     border-radius: 5px;
+     width: 180px;
+     margin-right: 10px;
+     height: 3px;
+     background-color: rgb(38, 61, 76);
+
+ }
+
+ .time1 {
+
+     margin-top: -8px;
+
+ }
+
+ .go {
+     /* margin-top: -10px; */
+     position: relative;
+ }
+
+ .go h3 {
+     position: absolute;
+     font-size: 12px;
+     transform: scale(0.4);
+     white-space: nowrap;
+     left: -65px;
+     top: -20px
+ }
+
+ .go p {
+     position: absolute;
+     font-size: 12px;
+     transform: scale(0.5);
+     right: -500px;
+     top: -18px;
+ }
+
+ .go img {
+     position: absolute;
+     right: 15px;
+     width: 8px;
+     height: 8px;
+     top: -2px;
+ }
+
+ .t2 {
+     width: 85%;
+     height: 1px;
+     margin: 10px auto;
+     background-color: rgb(38, 61, 76);
+ }
+
+ .t3 {
+     width: 85%;
+     height: 1px;
+     margin: 20px auto;
+     background-color: rgb(38, 61, 76);
+ }
+
+ .completed {
+     background-color: green;
+     color: white;
+     padding: 2px;
+     border-radius: 5px
+ }
+
+ .completed {
+     background-color: green;
+     color: white;
+     padding: 2px;
+     border-radius: 5px
+ }
+
+ .in-progress {
+     background-color: red;
+     color: white;
+     padding: 2px;
+     border-radius: 5px
+ }
+
+ .uncompleted {
+     background-color: #E6A23C;
+     color: white;
+     padding: 2px;
+     border-radius: 5px
+ }

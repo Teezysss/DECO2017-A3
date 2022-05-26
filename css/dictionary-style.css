@@ -1,0 +1,175 @@
+#header {
+    background-color: rgb(38, 61, 76);
+    height: 120px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+
+}
+
+#circle {
+    display: flex;
+}
+
+.l1 {
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.l2 {
+    background-color: yellow;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.l3 {
+    background-color: green;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.picLogo {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.picLogo img {
+    height: 80px;
+    width: 80px;
+}
+
+#text h2 {
+    color: rgb(32, 206, 133);
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#text p {
+    font-size: 12px;
+    margin-top: -5px;
+    color: white;
+}
+
+#search {
+    display: flex;
+    margin-top: 25px;
+    margin-left: 30px;
+
+}
+
+#search img {
+    /* box-sizing: border-box; */
+    padding: 10px;
+    height: 20px;
+    background-color: white;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+#search input {
+    height: 38px;
+    border: none;
+    width: 450px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+#header ul {
+    margin-top: -30px;
+    text-align: center;
+    display: flex;
+}
+
+#header ul li {
+    line-height: 160px;
+    height: 130px;
+    width: 100px;
+    /* background-color: red; */
+}
+
+#main {
+    /* margin-top: -px; */
+    display: flex;
+}
+
+.left {
+    text-align: center;
+    width: 200px;
+    background-color: rgb(213, 217, 220);
+    height: 700px;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+.left h3 {
+
+    /* background-color: aqua; */
+    height: 80px;
+    line-height: 80px;
+}
+
+.right {
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+    background-color: rgb(243, 245, 245);
+}
+
+ol {
+    counter-reset: li;
+}
+
+.right ol li::before {
+    content: counter(li);
+    color: #4a4a4a;
+    ;
+    display: inline-block;
+    width: 2em;
+    margin-left: -1em;
+    counter-increment: li;
+}
+
+.right h2 {
+    font-size: 20px;
+}
+
+#word {
+    margin: 0;
+    display: inline-block;
+}
+
+#phonetic {
+    color: #4a4a4a;
+}
+
+#play::after {
+    background-image: url('../images/speaker.png');
+    background-size: 16px 16px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    content: "";
+    cursor: pointer;
+}
+
+#play {
+    font-size: 33px;
+}
+
+/* .text {
+            margin-top: 10px;
+        } */

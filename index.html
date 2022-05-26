@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>index</title>
+    <link rel="stylesheet" href="./css/index-style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="header">
+            <div id="logo">
+                <img src="./images/logo.svg" alt="">
+                <div id="text">
+                    <h2>Timer</h2>
+                    <p>for better time management</p>
+                </div>
+
+            </div>
+            <ul>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>website</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
+        <div id="main">
+            <h2>Log In</h2>
+            <div id="input1">
+                <span>Email</span><br>
+                <input type="email" name="email">
+            </div>
+            <div id="input2" style="margin-top: 10px;">
+                <span>Password</span><br>
+                <input type="password" name="password">
+            </div>
+
+            <button id="login">Log In</button>
+            <div id="box">
+                <input type="checkbox"><span>Remember Me</span>
+                <a href="">Forget Password</a>
+            </div>
+            <span style="margin-left: 50px;"> Don't have an account yet?<a href="" style="margin-left: 10px;">Register Now</a> </span>
+
+
+
+        </div>
+    </div>
+    <script>
+        
+        let login = document.querySelector("#login");
+        login.onclick = function(e){
+            // let user = document.querySelector("input[name='email']").value;
+            // let password = document.querySelector("input[name='password']").value;
+            // if(user=="" || password==""){
+            //     alert("Enter your username and password.");
+            //     return;
+            // }
+            // if(user=="123@163.com" && password=="123456"){
+                window.location.href= "./task.html";
+            // }
+        }
+    </script>
+</body>
+
+</html>

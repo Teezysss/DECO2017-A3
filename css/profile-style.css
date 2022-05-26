@@ -1,0 +1,332 @@
+body {
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    color: rgb(38, 61, 76)
+}
+
+#circle {
+
+    display: flex;
+}
+
+.l1 {
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.l2 {
+    background-color: yellow;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.l3 {
+    background-color: green;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.picLogo {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.picLogo img {
+    height: 80px;
+    width: 80px;
+}
+
+.left {
+    box-sizing: border-box;
+    width: 210px;
+    height: 100%;
+    background-color: rgb(38, 61, 76);
+    padding-top: 20px;
+
+    height: 800px;
+
+}
+
+#text h2 {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 0px;
+    color: rgb(32, 206, 133);
+}
+
+.left ul {
+    margin-top: 40px;
+    width: 150px;
+
+    margin: 10px auto;
+
+
+}
+
+.left ul li {
+    border-radius: 10px;
+    display: flex;
+    margin-left: -40px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 40px;
+    margin-top: 10px;
+
+}
+
+.left li img {
+    height: 20px;
+    /* margin-top: 10px; */
+    margin-top: 5px;
+}
+
+.left li span {
+    color: white;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#text p {
+    white-space: nowrap;
+    color: white;
+    font-size: 18px;
+    transform: scale(0.5);
+    margin-left: -60px;
+    margin-top: -5px;
+
+}
+
+.right {
+    width: 280px;
+    background-color: rgb(213, 217, 220);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.center {
+    background-color: rgb(243, 245, 245);
+    flex: 1;
+}
+
+
+
+.center-main {
+    width: 90%;
+    margin: 40px auto;
+
+}
+
+.center-main .head {
+    background-color: #263d4c;
+    height: 130px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.head img {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    left: 50px;
+    top: 80px;
+    border: 2px solid white;
+}
+
+.head h3 {
+    /* color: wheat; */
+    position: relative;
+    top: 130px;
+    left: 120px;
+}
+
+.center ul {
+    margin-top: 40px;
+    display: flex;
+    text-align: left;
+    margin-left: -40px;
+}
+
+.center ul li {
+    margin-right: 30px;
+    font-size: 13px;
+    color: rgb(161, 160, 158);
+
+}
+
+.center ul li span {
+    font-weight: bold;
+    color: rgb(38, 61, 76)
+}
+
+.center-main h2 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.item {
+    display: flex;
+    margin-top: 20px;
+}
+
+.first-item {
+
+    width: 300px;
+    background-color: rgb(213, 217, 220);
+    margin-right: 15px;
+    border-radius: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+}
+
+.first-item ul {
+    margin-top: 30px;
+    display: block;
+}
+
+.first-item ul li {
+    background-color: red;
+    width: 250px;
+    height: 50px;
+
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: -10px;
+
+}
+
+.first-item ul li h4 {
+    color: white;
+    /* margin-top: 40px; */
+
+}
+
+.first-item ul li p {
+    font-size: 20px;
+    color: white;
+    transform: scale(0.5);
+    margin-top: -20px;
+    margin-left: -80px;
+}
+
+.second-item {
+    width: 400px;
+    /* height: 80px; */
+    background-color: rgb(213, 217, 220);
+    border-radius: 20px;
+    padding-left: 30px;
+
+
+
+}
+
+.right h2 {
+    font-size: 14px;
+}
+
+.activity .circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: aliceblue;
+}
+
+.child {
+    display: flex;
+    white-space: nowrap;
+    margin-top: 40px;
+}
+
+.child .text {
+
+    position: relative;
+}
+
+.child h6 {
+    position: absolute;
+    top: -25px;
+
+}
+
+.child p {
+    position: absolute;
+    font-size: 12px;
+    transform: scale(0.8);
+    top: 10px;
+    left: -5px;
+    color: rgb(112, 109, 109);
+}
+
+
+
+.weekdays li {
+
+    width: 20px;
+    color: #666;
+    margin-top: -20px;
+
+}
+
+.days {
+    margin-top: -100px;
+    flex-wrap: wrap;
+    display: flex;
+    padding-top: -50px;
+}
+
+.days li {
+
+    width: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 12px;
+
+    color: rgb(38, 61, 76);
+}
+
+.days li {
+    cursor: pointer;
+}
+
+.days li:hover {
+    background-color: crimson;
+}
+
+.days .active {
+    border-radius: 50%;
+    padding: 2px;
+    background: green;
+    color: white
+}
+
+.point .a {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.point li {
+    display: flex;
+    font-size: 12px;
+    transform: scale(0.8);
+}

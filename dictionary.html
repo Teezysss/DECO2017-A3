@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="./css/dictionary-style.css">
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <div id="header">
+        <div id="logo">
+            <div id="circle">
+                <div class="l1"></div>
+                <div class="l2"></div>
+                <div class="l3"></div>
+            </div>
+            <div class="picLogo">
+                <img src="./images/logo.svg" alt="" >
+                <div id="text">
+                    <h2>Timer</h2>
+                    <p>Dictionary</p>
+                </div>
+            </div>
+        </div>
+        <div id="search">
+            <div style="cursor: pointer;"><img src="./images/搜索.png" alt=""></div>
+            <input type="text" name="word" placeholder="Enter a word">
+        </div>
+        <ul>
+            <li><a href="./index.html"><img src="./images/home (1).svg" alt=""></a></li>
+            <li><a href="./profile.html"><img src="./images/account.svg" alt=""></a></li>
+            <li><a href="./task.html"><img src="./images/任务列表 (1).svg" alt=""></a></li>
+            <li><a href="./music.html"><img src="./images/音乐娱乐.svg" alt=""></a></li>
+            <li><a href="./dictionary.html"><img src="./images/系统词典.svg" alt=""></a></li>
+        </ul>
+
+    </div>
+    <div id="main">
+        <div class="left">
+            <h3>Definiton</h2>
+                <h3 style="margin-top: -19px;">Synonyms</h3>
+        </div>
+
+        <div class="right">
+            <div class="text">
+                <p id = "word">hello </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <span id="phonetic">/həˈləʊ/</span>  &nbsp<span id="play"></span>
+                <audio>
+                    <source src="http://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3">
+                </audio>
+                <hr>
+            </div>
+            <!-- <section class="meaning">
+            </section> -->
+        </div>
+    </div>
+    <script src="./js/dictionary.js"></script>
+</body>
+
+</html>
