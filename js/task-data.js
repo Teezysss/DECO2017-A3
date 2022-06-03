@@ -1,3 +1,4 @@
+/**the task list data */
 var tasks = [
     {
         'name': 'DECO11 1006 Assessment 2: User-centred research',

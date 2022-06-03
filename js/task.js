@@ -1,7 +1,7 @@
 "use strict"
 
 let center = document.getElementById('center');
-
+// paging data
 let showTasks = tasks;
 let selectedDate = "";
 let selectedStatus = -1;
@@ -11,14 +11,16 @@ var page = {
     pageCount: 0,
     currentPage: 0,
 }
+// calculate page count
 page.pageCount = Math.ceil(page.total/page.pageSize);
+// reset page data
 function resetPage(){
     page.total = showTasks.length;
     page.currentPage = 0;
     page.pageCount = Math.ceil(page.total / page.pageSize)
 }
 let taskList = document.getElementById("taskList");
-
+// when date select change
 document.querySelector("#selected-date").onchange= function(e){
     selectedDate = this.options[this.selectedIndex].text;
     if(selectedStatus!=-1){
@@ -32,6 +34,7 @@ document.querySelector("#selected-date").onchange= function(e){
     show();
 
 };
+// when status select change
 document.querySelector("#selected-status").onchange = function (e) {
     selectedStatus = this.options[this.selectedIndex].value;
     if (selectedDate != "") {
@@ -43,6 +46,7 @@ document.querySelector("#selected-status").onchange = function (e) {
     resetPage();
     show();
 };
+// display task list.
 function show() {
     let taskList = document.getElementById("taskList");
     taskList.innerHTML = "";
@@ -70,23 +74,27 @@ function show() {
     }
 }
 show();
+
 let preBtn = document.getElementById("preBtn");
 let nextBtn = document.getElementById("nextBtn");
+// show previous page
 preBtn.onclick = function (e) {
-    
+    // nothing if this is first page
     if (page.currentPage == 0) {
-        this.disabled = true;
+        this.disabled = true; // disabled previous button
         return;
     }
     console.log("previous page")
     page.currentPage--;
-    document.getElementById("nextBtn").disabled = false;
-    if(page.currentPage==0)
+    document.getElementById("nextBtn").disabled = false; // next button disabled
+    if (page.currentPage == 0) //change its status if first page. 
         this.disabled = true;
-    show();
+    show(); 
 
 }
+// show previsou page
 nextBtn.onclick = function (e) {
+    // nothing if this is last page
     if (page.currentPage==page.pageCount-1){
         this.disabled = true;
         return;
@@ -103,14 +111,15 @@ nextBtn.onclick = function (e) {
 
 console.log(center);
 
-
+// add task 
 var addTask = document.querySelector("#add-task");
 console.log(addTask);
+// when add task button is clicked 
 addTask.onclick = function (e) {
     console.log("add task.");
-    document.querySelector("#alert").style.display = "block";
+    document.querySelector("#alert").style.display = "block"; // show alert 
 }
-
+// acquire input data and add 
 let addBtn = document.querySelector("#add-btn");
 addBtn.onclick = function (e) {
     let dueDate = document.querySelector('#alert input[name="due-date"]').value;
@@ -129,30 +138,33 @@ addBtn.onclick = function (e) {
     console.log(task);
     document.querySelector("#alert").style.display = "none";
 }
-
+// timer 
 let playBtn = document.querySelector("#play-button");
 let stopBtn = document.querySelector("#stop-button");
 var timer = {
-    id: 0,
-    start: false,
-    totalTime: 0
+    id: 0, // timer id
+    start: false, // is start 
+    totalTime: 0 // total time(second)
 };
+//when play button is clicked
 playBtn.onclick = function(e){
-    
+    // timer is started
     if(timer.id!=0 && timer.start){
         clearInterval(timer.id);
         console.log("stop")
         timer.start = false;
         return;
     }
+    // start timer if timer doesnot start
     console.log("start timer")
     timer.id = setInterval(function(){
-        timer.start = true;
+        timer.start = true; 
         timer.totalTime ++;
         let second = timer.totalTime;
         let min = 0;
         let hour = 0;
         console.log(second);
+        // calculate time(hour, minus, second)
         if(second>=60){
             min = Math.floor(second/60);
             second = second % 60;
@@ -162,11 +174,13 @@ playBtn.onclick = function(e){
                 min %= 60; 
             }
         }
+        // show timer
         document.querySelector(".time").textContent = `${hour<10 ? '0'+ hour : hour}:${ min<10?'0'+min: min}:${second<10?'0'+second:second}`;
     }, 1000);
 }
+// stop button is clicked
 stopBtn.onclick = function(e){
-    if(timer.id!=0){
+    if(timer.id!=0 && timer.start){ // timer is started
         clearInterval(timer.id);
         document.querySelector(".time").textContent = "00:00:00";
 
@@ -182,20 +196,21 @@ let ul = document.querySelectorAll("ul.task-item");
 
 console.log(ul);
 let container = null;
+// mouse drag event
 for (let i = 0; i < ul.length; i++) {
-
+    // drag start 
     ul[i].ondragstart = function () {
         //   console.log(this);
         container = this;
     }
-  
+    
     ul[i].ondragover = function (e) {
         e.preventDefault();
     }
- 
+    // drop end
     ul[i].ondrop = function () {
         console.log("drop");
-        if (container != null && container != this) {
+        if (container != null && container != this) { // swap dom 
             let temp = document.createElement("li");
             // console.log(document.body);
             taskList.replaceChild(temp, this);

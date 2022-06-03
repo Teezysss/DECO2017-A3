@@ -1,12 +1,19 @@
+/**
+ * query your word
+ * @param {String} word 
+ */
 function queryWord(word) {
-    let xhr = new XMLHttpRequest();
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    let xhr = new XMLHttpRequest(); 
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;// api interface
+
     xhr.onreadystatechange = function (ev) {
+        // query sussussful 
         if (this.readyState == 4 && this.status == 200) {
             // console.log(this.responseText);
-            let data = JSON.parse(this.responseText);
+            let data = JSON.parse(this.responseText); // convert JSON string to javascript object 
             console.log(data);
             let container = document.querySelector(".right");
+            // parsing data and display on screen
             for (let i = 0; i < data.length; ++i) {
                 console.log(data[i]);
                 document.querySelector("#word").textContent = data[i].word;
@@ -49,42 +56,52 @@ function queryWord(word) {
 
             }
             // respdata = data;
-
         }
     }
     xhr.open("get", url);
     xhr.send();
 }
+// playing music when the play button is clicked
 var player = document.querySelector("#play");
 player.onclick = function (ev) {
     console.log("play")
     ev.preventDefault();
     document.querySelector("audio").play();
-
 }
+//query word "hello", and show
 queryWord("hello");
 var search = document.querySelector("#search>div");
+/**
+ * query word when the search buttion is clicked
+ */
 search.onclick = function (ev) {
+    // clear page data
     let word = document.querySelector("#search>input").value;
     let parent = document.querySelector(".right");
     let sec = document.querySelectorAll("section");
     for (let i = 0; i < sec.length; ++i) {
         parent.removeChild(sec[i]);
     }
+    // query word and show
     queryWord(word);
 }
+/**
+ * also query word when the user is pressing "Enter" key 
+ */
 document.onkeydown = function (ev) {
     let inputWord = document.querySelector("#search>input");
     // console.log(inputWord);
-    console.log(ev.keyCode + ": " + ev.key);
-    if (ev.keyCode == 13 && document.activeElement == inputWord) {
+    console.log(ev.key+" enter down");
+    if (ev.key == "Enter" && document.activeElement == inputWord) {
         let word = inputWord.value;
         console.log("keydown");
+        // clear page data.
         let parent = document.querySelector(".right");
         let sec = document.querySelectorAll("section");
         for (let i = 0; i < sec.length; ++i) {
             parent.removeChild(sec[i]);
         }
+        // query word
         queryWord(word);
     }
 }
